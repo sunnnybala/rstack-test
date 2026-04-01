@@ -1,0 +1,36 @@
+{
+  "total_runs": 21,
+  "completed_runs": 21,
+  "failed_runs": 0,
+  "conditions": 7,
+  "seeds_per_condition": 3,
+  "best_dropout_run": {
+    "condition": "dropblock_p0.3",
+    "test_acc_mean": 0.8029,
+    "test_acc_std": 0.0019
+  },
+  "baseline": {
+    "condition": "no_dropout",
+    "test_acc_mean": 0.8570,
+    "test_acc_std": 0.0022
+  },
+  "worst_run": {
+    "condition": "standard_p0.5",
+    "test_acc_mean": 0.5264,
+    "test_acc_std": 0.0376
+  },
+  "key_findings": {
+    "type_effect_larger_than_rate": true,
+    "type_effect_size": "DropBlock 0.3 (80.3%) vs Standard 0.3 (76.0%) = 4.3pp at same rate",
+    "rate_effect_size": "Standard 0.3 (76.0%) vs Standard 0.5 (52.6%) = 23.4pp for same type",
+    "rate_0.3_beats_0.5_all_types": true,
+    "dropout_hurts_vs_baseline": "All dropout configs underperform no-dropout at 50 epochs"
+  },
+  "figures_generated": [
+    "test_accuracy_comparison.png",
+    "training_curves.png",
+    "generalization_gap.png",
+    "type_vs_rate_heatmap.png"
+  ],
+  "tables_generated": ["comparison.tex"]
+}

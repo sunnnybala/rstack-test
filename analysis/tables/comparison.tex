@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Test accuracy (\%) by dropout type and rate on CIFAR-10. Mean $\pm$ std over 3 seeds. Best dropout result in \textbf{bold}.}
+\label{tab:comparison}
+\begin{tabular}{llcccc}
+\toprule
+Dropout Type & Rate & Test Acc (\%) & Gen. Gap & Epochs to 80\% Val \\
+\midrule
+None (baseline) & --- & 85.70 $\pm$ 0.22 & +0.064 & 17.0 \\
+\midrule
+Standard & 0.3 & 76.02 $\pm$ 1.37 & +0.084 & --- \\
+Standard & 0.5 & 52.64 $\pm$ 3.76 & +0.250 & --- \\
+\midrule
+Spatial & 0.3 & 76.46 $\pm$ 0.13 & $-$0.059 & --- \\
+Spatial & 0.5 & 62.10 $\pm$ 0.42 & $-$0.078 & --- \\
+\midrule
+\textbf{DropBlock} & \textbf{0.3} & \textbf{80.29 $\pm$ 0.19} & $-$0.047 & 49.0 \\
+DropBlock & 0.5 & 73.70 $\pm$ 0.31 & $-$0.067 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
